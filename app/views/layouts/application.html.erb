@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to AddLive</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <div class="container">
+	    	<div class="logoc">
+		      <%= link_to "Add-Live", '#', id: "logo" %>
+		    </div>
+		    <h6> Where Adds add happiness...</h6>   
+	      <nav>
+	        <ul class="nav pull-right">
+	          
+	        </ul>
+	      </nav>
+	    </div>
+	  </div>
+	</header>
+	<div class="container">
+      <%= yield %>
+     	<footer>
+    		<hr></hr>
+	    	<p align="center">
+	    		Copyright 2012 Add-live
+	    	</p>
+    	</footer>
+    </div>
+</body>
+</html>
