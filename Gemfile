@@ -22,6 +22,11 @@ end
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'haml'
+
+group :production do
+	gem 'pg'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
