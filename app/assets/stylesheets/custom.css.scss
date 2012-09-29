@@ -1,4 +1,20 @@
 @import "bootstrap";
+
+.container{
+	width: 1050px;
+}
+.index_page{
+	background-color:#CCD0DF;
+	border-radius: 5px;
+}
+
+.span3{
+	margin-left: 0;
+    padding-left: 19px;
+    border-left: 2px solid #eee;
+}
+
+
 #logo {
 	font-size: 30px;
 	text-decoration: none;
