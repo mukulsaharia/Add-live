@@ -1,7 +1,14 @@
 .index_page
 	.container-fluid
 		.row-fluid
-			.span9 
+			.span9
 				
 			.span3
+				%form 
+					.members_area
+						%strong Members Area
+					.form-inline
+						%input.search-query{:type=> "text", :placeholder=>"User Name",:id=>"username"}
+						%input.search-query{:type=>"password", :placeholder=>"Password",:id=>"password"}
+						.btn.btn-normal.btn-primary.login_button{:type=>"submit"}Sign in
 				

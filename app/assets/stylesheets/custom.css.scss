@@ -10,11 +10,25 @@
 
 .span3{
 	margin-left: 0;
-    padding-left: 19px;
+    padding-left: 10px;
     border-left: 2px solid #eee;
 }
-
-
+.form-inline{
+	margin-top:0px;
+}
+.members_area{
+	margin-top:35px;
+	margin-bottom:20px;
+	font-size:140%;
+	color: gray;
+}
+.login_button{
+	margin-left:80px;
+}
+#password{
+	margin-top:10px;
+	margin-bottom:15px;
+}
 #logo {
 	font-size: 30px;
 	text-decoration: none;
