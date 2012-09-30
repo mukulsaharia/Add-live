@@ -3,6 +3,14 @@ AddLive::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   root :to => 'staticpage#index'
+  match '/vision', to: 'staticpage#vision'
+  match '/about', to: 'staticpage#about'
+  match '/career', to: 'staticpage#career'
+  match '/faq', to: 'staticpage#faq'
+  match '/plan', to: 'staticpage#plan'
+  match '/support', to: 'staticpage#support'
+  match '/whyaddlive', to: 'staticpage#whyaddlive'
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
