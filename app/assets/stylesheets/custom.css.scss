@@ -4,14 +4,26 @@
 	width: 1050px;
 }
 .index_page{
-	background-color:#CCD0DF;
+	background-color:#EAEAEB;
 	border-radius: 5px;
+	border-right: 5px solid #D7D7DA;
+	border-bottom: 5px solid #D7D7DA;
+}
+.title_tag{
+	margin-top: 15px;
+	margin-left:-30px;
+}
+.title_line{
+	margin-top: -35px;
+	margin-left:25px;
+	font-family:Broadway;
+	font-size:160%;
 }
 
 .span3{
 	margin-left: 0;
     padding-left: 10px;
-    border-left: 2px solid #eee;
+    border-left: 2px solid white;
 }
 .form-inline{
 	margin-top:0px;
@@ -19,11 +31,14 @@
 .members_area{
 	margin-top:35px;
 	margin-bottom:20px;
-	font-size:140%;
+	font-size:130%;
 	color: gray;
 }
 .login_button{
-	margin-left:80px;
+	margin-left:150px;
+}
+.signup_button{
+	margin-top: 10px;
 }
 #password{
 	margin-top:10px;
