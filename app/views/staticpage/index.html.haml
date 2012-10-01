@@ -15,11 +15,13 @@
 					.members_area
 						%strong Members Area
 					.form-inline
-						%input.search-query{:type=> "text", :placeholder=>"User Name",:id=>"username"}
-						%input.search-query{:type=>"password", :placeholder=>"Password",:id=>"password"}
+						%input.search-query.text_box{:type=> "text", :placeholder=>"User Name",:id=>"username"}
+						%input.search-query.text_box{:type=>"password", :placeholder=>"Password",:id=>"password"}
 						.btn.btn-normal.btn-primary.login_button{:type=>"submit"}Sign in
 
 					.members_area
 						%strong New user ?
-						.btn.btn-primary.btn-block.signup_button Click Here to Sign up
+						.btn.btn-primary.signup_button
+							=link_to "Click Here to Register", signup_path
+							
 				

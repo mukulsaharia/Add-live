@@ -1,5 +1,7 @@
 AddLive::Application.routes.draw do
   
+  get "users/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   root :to => 'staticpage#index'
@@ -10,6 +12,9 @@ AddLive::Application.routes.draw do
   match '/plan', to: 'staticpage#plan'
   match '/support', to: 'staticpage#support'
   match '/whyaddlive', to: 'staticpage#whyaddlive'
+
+
+  match '/signup', to: 'users#new'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

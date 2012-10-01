@@ -1,7 +1,10 @@
 @import "bootstrap";
 
 .container{
-	width: 1050px;
+	width: 1000px;
+}
+.text_box{
+	width:200px;
 }
 .index_page{
 	background-color:#EAEAEB;
@@ -24,6 +27,12 @@
 	margin-top:25px;
 	margin-left:55px;
 }
+.reg_form{
+	margin-top:25px;
+}
+#state{
+	width:225px;
+}
 
 .span3{
 	margin-left: 0;
@@ -40,10 +49,16 @@
 	color: gray;
 }
 .login_button{
-	margin-left:150px;
+	margin-left:130px;
+	
 }
-.signup_button{
+.signup_button {
 	margin-top: 10px;
+}
+a{color:white;}
+.signup_button :hover{
+	text-decoration:none;
+	color:white;
 }
 #password{
 	margin-top:10px;
@@ -55,7 +70,8 @@
 	}
 .logoc
 {
-	margin-top: -30px
+	margin-top: -50px;
+	margin-bottom:0px;
 }
 .logoc :hover
 {

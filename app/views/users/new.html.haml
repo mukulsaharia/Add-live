@@ -1,0 +1,114 @@
+=provide(:title, 'Register Here')
+%title
+	= yield(:title)
+.index_page
+	.container
+		.span9
+			.title_tag
+				=image_tag("title241x40.png")
+			.title_line
+				= yield(:title)
+			.span6.offset3
+				.reg_form
+					%form 
+						%hr
+
+						.form-horizontal
+							%label
+								.heading_lable
+									Personal Information
+							.control-group
+								.control-label
+									%label
+										First Name
+								.controls
+									%input{:type=> "text", :placeholder=>"First Name",:id=>"fname"}
+							
+							.control-group
+								.control-label
+									%label
+										Last Name
+								.controls
+									%input{:type=> "text", :placeholder=>"Last Name",:id=>"lname"}
+							
+							.control-group
+								.control-label
+									%label
+										E-mail
+								.controls
+									%input{:type=> "text", :placeholder=>"E-mail",:id=>"email"}
+
+							.control-group
+								.control-label
+									%label
+										Contact no.
+								.controls
+									%input{:type=> "text", :placeholder=>"Mobile no.",:id=>"mobile"}
+
+							.control-group
+								.control-label
+									%label
+										Address
+								.controls
+									%textarea{:type=> "textarea", :placeholder=>"Address",:id=>"address", :row=>3}
+
+							.control-group
+								.control-label
+									%label
+										City
+								.controls
+									%input{:type=> "text", :placeholder=>"City",:id=>"city"}
+
+							.control-group
+								.control-label
+									%label
+										State
+								.controls
+									%select{ :placeholder=>"Select state",:id=>"state",:name=>"slist"}
+										%option{:value=>"Andaman and Nicobar Islands"}Andaman and Nicobar Islands
+										%option{:value=>"Andhra Pradesh"}Andhra Pradesh
+										%option{:value=>"Arunachal Pradesh"}Arunachal Pradesh
+										%option{:value=>"Assam"}Assam
+										%option{:value=>"Chandigarh"}Chandigarh
+										%option{:value=>"Chhatisgarh"}Chhatisgarh
+										%option{:value=>"Dadar nagar Haveli"}dadar nagar haveli
+										%option{:value=>"Daman and Diu"}Daman and Diu
+										%option{:value=>"Delhi"}Delhi
+										%option{:value=>"Goa"}Goa
+										%option{:value=>"Gujrat"}Gujrat
+										%option{:value=>"Haryana"}Haryana
+										%option{:value=>"Himanchal Pradesh"}Himanchal Pradesh
+										%option{:value=>"Jammu and Kashmir"}jammu and Kashmir
+										%option{:value=>"Jharkhand"}Jharkhand
+										%option{:value=>"Karnataka"}Karnataka
+										%option{:value=>"Kerala"}Kerala
+										%option{:value=>"Lakshadweep"}Lakshadweep
+										%option{:value=>"Madhya Pradesh"}Madhya Pradesh
+										%option{:value=>"Maharashtra"}Maharashtra
+										%option{:value=>"Manipur"}Manipur
+										%option{:value=>"Meghalaya"}Meghalaya
+										%option{:value=>"Mizoram"}Mizoram
+										%option{:value=>"Nagaland"}Nagaland
+										%option{:value=>"Orissa"}Orissa
+										%option{:value=>"Pondicherry"}Pondicherry
+										%option{:value=>"Punjab"}Punjab
+										%option{:value=>"Rajasthan"}Rajasthan
+										%option{:value=>"Sikkim"}Sikkim
+										%option{:value=>"Tamil Nadu"}Tamil Nadu
+										%option{:value=>"Tripura"}Tripura
+										%option{:value=>"Uttaranchal"}Uttaranchal
+										%option{:value=>"Uttar Pradesh"}Uttar Pradesh
+										%option{:value=>"West Bengal"}West Bengal
+							.control-group
+								.control-label
+									%label
+										Pincode
+								.controls
+									%input{:type=> "text", :placeholder=>"pincode",:id=>"pincode"}
+							%hr
+
+							%label
+								.heading_lable
+									Bank Information
+					
+ 					
