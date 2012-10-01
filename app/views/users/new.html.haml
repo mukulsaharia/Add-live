@@ -11,9 +11,28 @@
 			.span6.offset3
 				.reg_form
 					%form 
-						%hr
-
 						.form-horizontal
+							%hr
+							%label
+								.heading_lable
+									Company Information
+							.control-group
+								.control-label
+									%label
+										Registration type
+								.controls
+									%select{ :id=>"state",:name=>"slist"}
+										%option{:value=>"associate"}Associate
+										%option{:value=>"marchant"}Marchant
+
+							.control-group
+								.control-label
+									%label
+										Joining PIN
+								.controls
+									%input{:type=> "text", :placeholder=>"Enter Joining PIN",:id=>"jpin"}
+
+							%hr
 							%label
 								.heading_lable
 									Personal Information
@@ -110,5 +129,37 @@
 							%label
 								.heading_lable
 									Bank Information
-					
+							
+							.control-group
+								.control-label
+									%label
+										Name of Bank
+								.controls
+									%input{:type=> "text", :placeholder=>"Name of Bank",:id=>"bank"}
+
+							.control-group
+								.control-label
+									%label
+										Account no.
+								.controls
+									%input{:type=> "text", :placeholder=>"Account no.",:id=>"account"}
+
+							.control-group
+								.control-label
+									%label
+										IFSC code
+								.controls
+									%input{:type=> "text", :placeholder=>"IFSC code",:id=>"ifsc"}
+
+							.control-group
+								.control-label
+									%label
+										PAN no.
+								.controls
+									%input{:type=> "text", :placeholder=>"PAN no.",:id=>"pan"}
+
+							%hr
+
+							.btn.btn-normal.btn-primary.login_button.reg_me{:type=>"submit"}Register me
+							.btn.btn-normal.btn-primary.login_button.reg_cancle{:type=>"submit"}Cancle
  					
