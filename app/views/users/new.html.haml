@@ -23,7 +23,14 @@
 								.controls
 									%select{ :id=>"state",:name=>"slist"}
 										%option{:value=>"associate"}Associate
-										%option{:value=>"marchant"}Marchant
+										%option{:value=>"franchise"}Franchise
+										
+							.control-group
+								.control-label
+									%label
+										Sponser ID
+								.controls
+									%input{:type=> "text", :placeholder=>"Enter Sponser ID",:id=>"jpin"}
 
 							.control-group
 								.control-label
@@ -31,6 +38,20 @@
 										Joining PIN
 								.controls
 									%input{:type=> "text", :placeholder=>"Enter Joining PIN",:id=>"jpin"}
+
+							.control-group
+								.control-label
+									%label
+										Password
+								.controls
+									%input{:type=> "password", :placeholder=>"Enter Password",:id=>"pass"}
+
+							.control-group
+								.control-label
+									%label
+										Confirm password
+								.controls
+									%input{:type=> "password", :placeholder=>"Confirm Password",:id=>"pass"}
 
 							%hr
 							%label
