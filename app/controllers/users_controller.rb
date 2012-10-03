@@ -3,5 +3,9 @@ class UsersController < ApplicationController
   	@user="mukul saharia"
   end
 
+  def delete
+
+  end
+
 
 end

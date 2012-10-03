@@ -1,5 +1,10 @@
 AddLive::Application.routes.draw do
   
+  devise_for :users
+  devise_for :users do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
+
   get "users/new"
 
   # The priority is based upon order of creation:
@@ -15,6 +20,7 @@ AddLive::Application.routes.draw do
 
 
   match '/signup', to: 'users#new'
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
