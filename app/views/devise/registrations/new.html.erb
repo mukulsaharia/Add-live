@@ -1,0 +1,192 @@
+<%=provide(:title, 'Register Here') %>
+<div class="index_page">
+	<div class="container">	
+		<div class="span9">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				<%=yield(:title) %>
+			</div>	
+			<div class="span6 offset3">
+				<div class="reg_form">
+					<div class="form-horizontal">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+ 						<%= devise_error_messages! %>
+
+ 						<hr>
+ 						<label class="heading_lable">Company Information</label>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Registration Type" %>
+							</div>
+							<div class="controls">
+								<%= f.select(:registration_type, options_for_select([['Associate','Associate'], ['Franchise','Franchise']])) %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Sponser ID" %>
+							</div>
+							<div class="controls">
+								<%= f.text_field :sponserID %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Joining PIN" %>
+							</div>
+							<div class="controls">
+								<%= f.text_field :jpin %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label :password %>
+							</div>
+							<div class="controls">
+								<%= f.password_field :password %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Confirm Password" %>
+							</div>
+							<div class="controls">
+								<%= f.password_field :password_confirmation %>
+							</div>
+						</div>
+
+						<hr>
+						<label class="heading_lable">Personal Information</label>
+
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "First name" %>
+							</div>
+							<div class="controls">
+								<%= f.text_field :fname %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Last name"%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :lname %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label :email %>
+							</div>
+							<div class="controls">
+								<%= f.email_field :email %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Contact no."%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :contactno %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Address"%>
+							</div>
+							<div class="controls">
+								<%= f.text_area :address,:rows=>"3" %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label :City%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :city %>
+							</div>
+						</div>
+
+						
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "State" %>
+							</div>
+							<div class="controls">
+								<%= f.select(:state, options_for_select([['Andaman and Nicobar Islands','Andaman and Nicobar Islands'],["Andhra Pradesh","Andhra Pradesh"],["Arunachal Pradesh","Arunachal Pradesh"],["Assam","Assam"],["Bihar","Bihar"],["Chandigarh","Chandigarh"],["Chhattisgarh","Chhattisgarh"],["Dadra and Nagar Haveli","Dadra and Nagar Haveli"],["Daman and Diu","Daman and Diu"],["Delhi","Delhi"],["Goa","Goa"],["Gujarat","Gujarat"],["Haryana","Haryana"],["Himachal Pradesh","Himachal Pradesh"],["Jammu and Kashmir","Jammu and Kashmir"],["Jharkhand","Jharkhand"],["Karnataka","Karnataka"],["Kerala","Kerala"],["Lakshadweep","Lakshadweep"],["Madhya Pradesh","Madhya Pradesh"],["Maharashtra","Maharashtra"],["Manipur","Manipur"],["Meghalaya","Meghalaya"],["Mizoram","Mizoram"],["Nagaland","Nagaland"],["Orissa","Orissa"],["Pondicherry","Pondicherry"],["Punjab","Punjab"],["Rajasthan","Rajasthan"],["Sikkim","Sikkim"],["Tamil Nadu","Tamil Nadu"],["Tripura","Tripura"],["Uttaranchal","Uttaranchal"],["Uttar Pradesh","Uttar Pradesh"],["West Bengal","West Bengal"]]))%>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "PIN code"%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :pincode %>
+							</div>
+						</div>
+
+						<hr>
+ 						<label class="heading_lable">Bank Information</label>
+ 						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Name of bank"%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :nameofbank %>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "Account no."%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :accountno %>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "IFSC no"%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :ifscno %>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "PAN no."%>
+							</div>
+							<div class="controls">
+								<%= f.text_field :panno %>
+							</div>
+						</div>
+
+
+						<div class="control-group">
+							<div class="controls">
+								<%= f.submit "Sign up" %>
+							</div>
+						</div>
+						
+
+  
+<% end %>
+
+</div>
+</div>
+</div>
+</div>
+</div>

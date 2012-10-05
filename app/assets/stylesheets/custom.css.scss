@@ -55,7 +55,7 @@
 .signup_button {
 	margin-top: 10px;
 }
-a{color:white;}
+a{color:#DCD8D8;}
 .signup_button :hover{
 	text-decoration:none;
 	color:white;
@@ -71,7 +71,7 @@ a{color:white;}
 .logoc
 {
 	margin-top: -50px;
-	margin-bottom:0px;
+	margin-bottom:5px;
 }
 .logoc :hover
 {
@@ -139,4 +139,16 @@ textarea {
 	margin-bottom:20px;
 	font-weight:bold;
 	color:blue;
+}
+
+#error_explanation
+{
+H2 {font-size: 15px;}
+	color:red;
+	font-size:15px;
+}
+.render_link a{
+	text-decoration:none;
+	color: blue;
+	
 }

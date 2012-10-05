@@ -13,8 +13,12 @@
 		      <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
 
 		    </div>
-		    <p class="notice"><%= notice %></p>
- 			<p class="alert"><%= alert %></p>
+		    <% flash.each do |name,msg| %>
+		    	<% content_tag :div ,msg,:id=>"flash_#{name}" %>
+		    	<p class="alert"><%= notice %>
+ 				<%= alert %></p>
+		    <% end %>
+		    
  			<%= link_to "log out", destroy_user_session_path %>
 		</div>
 	  

@@ -33,7 +33,20 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
-
+      t.string :fname
+      t.string :lname
+      t.string :registration_type
+      t.string :state
+      t.string :sponserID
+      t.string :jpin
+      t.integer :contactno
+      t.string :address
+      t.string :city
+      t.integer :pincode
+      t.string :nameofbank
+      t.string :accountno
+      t.string :ifscno
+      t.string :panno
       t.timestamps
     end
 

@@ -1,0 +1,5 @@
+removed lines:
+	signin page
+	<div class="render_link control-group controls">
+				<%= render "devise/shared/links" %>
+				</div>

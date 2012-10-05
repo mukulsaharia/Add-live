@@ -44,14 +44,14 @@
 									%label
 										Password
 								.controls
-									%input{:type=> "password", :placeholder=>"Enter Password",:id=>"pass"}
+									%input{:type=> "password", :placeholder=>"Enter Password",:id=>"password"}
 
 							.control-group
 								.control-label
 									%label
 										Confirm password
 								.controls
-									%input{:type=> "password", :placeholder=>"Confirm Password",:id=>"pass"}
+									%input{:type=> "password", :placeholder=>"Confirm Password",:id=>"password"}
 
 							%hr
 							%label
@@ -181,6 +181,6 @@
 
 							%hr
 
-							.btn.btn-normal.btn-primary.login_button.reg_me{:type=>"submit"}Register me
-							.btn.btn-normal.btn-primary.login_button.reg_cancle{:type=>"submit"}Cancle
+							.btn.btn-normal.btn-primary.login_button.reg_me{:type=>"submit", :name=>"commit"}Register me
+							
  					

@@ -14,14 +14,12 @@
 				%form 
 					.members_area
 						%strong Members Area
-					.form-inline
-						%input.search-query.text_box{:type=> "text", :placeholder=>"User Name",:id=>"username"}
-						%input.search-query.text_box{:type=>"password", :placeholder=>"Password",:id=>"password"}
-						.btn.btn-normal.btn-primary.login_button{:type=>"submit"}Sign in
+						.btn.btn-normal.btn-primary.signup_button
+							=link_to "Sign in Here",new_user_session_path
 
 					.members_area
 						%strong New user ?
-						.btn.btn-primary.signup_button
-							=link_to "Click Here to Register", signup_path
+						.btn.btn-normal.btn-primary.signup_button
+							=link_to "Click Here to Register", new_user_registration_path
 							
 				
