@@ -39,10 +39,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :state
       t.string :sponserID
       t.string :jpin
-      t.integer :contactno
+      t.string :contactno
       t.string :address
       t.string :city
-      t.integer :pincode
+      t.string :pincode
       t.string :nameofbank
       t.string :accountno
       t.string :ifscno

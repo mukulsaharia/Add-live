@@ -9,17 +9,35 @@
 <body>
 	
 	    <div class="container">
-	       	<div class="logoc">
-		      <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
 
+	       	<div class="logoc">
+	       		<div class="span3">
+		      <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
+		    	</div>
+
+			    <div class="span2 offset7">
+
+					  <% if user_signed_in? %><b>
+					    Welcome, <%= current_user.fname %> </b>
+					    <div class="header_sign_out">
+					    	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+						</div>
+					  <% else %>
+					    Welcome, Guest
+					    <p><%= link_to "sign in", new_user_session_path %><p>
+					  <% end %>
+					
+			    </div>
+	    	 </div>	
 		    </div>
-		    <% flash.each do |name,msg| %>
+		    
+		<div class="container">
+		   	<% flash.each do |name,msg| %>
 		    	<% content_tag :div ,msg,:id=>"flash_#{name}" %>
 		    	<p class="alert"><%= notice %>
  				<%= alert %></p>
 		    <% end %>
-		    
- 			<%= link_to "log out", destroy_user_session_path %>
+ 			
 		</div>
 	  
 	<div class="container">

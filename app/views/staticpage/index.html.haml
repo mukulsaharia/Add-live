@@ -11,15 +11,28 @@
 					Add-live.com
 				
 			.span3
-				%form 
+				-if user_signed_in?
 					.members_area
-						%strong Members Area
-						.btn.btn-normal.btn-primary.signup_button
-							=link_to "Sign in Here",new_user_session_path
+						%strong Welcome,
+						.signup_button
+							= current_user.fname
+							= current_user.lname
+					.members_area
+						%strong Your Earnings :
+						.signup_button
+							= current_user.fname
+							= current_user.lname
+				-else
+					%form 
+						.members_area
+							%strong Members Area
+							.btn.btn-normal.btn-primary.signup_button
+								=link_to "Sign in Here",new_user_session_path
 
-					.members_area
-						%strong New user ?
-						.btn.btn-normal.btn-primary.signup_button
-							=link_to "Click Here to Register", new_user_registration_path
+						.members_area
+							%strong New user ?
+							.btn.btn-normal.btn-primary.signup_button
+								=link_to "Click Here to Register", new_user_registration_path
+					 
 							
 				

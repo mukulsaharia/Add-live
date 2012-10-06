@@ -76,7 +76,7 @@ a{color:#DCD8D8;}
 .logoc :hover
 {
 	
-	color: blue
+	
 }
 
 
@@ -151,4 +151,14 @@ H2 {font-size: 15px;}
 	text-decoration:none;
 	color: blue;
 	
+}
+.alert{
+	margin-top: 5px;
+	margin-bottom:0px;
+}
+.header_sign_out a{
+	text-decoration: none;
+	}
+.header_sign_out :hover{
+	color:black;
 }
