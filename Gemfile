@@ -8,6 +8,8 @@ gem 'rails', '3.2.8'
 gem 'sqlite3', :group => [:development, :test]
 gem 'thin'
 gem 'devise'
+gem 'carrierwave'
+gem 'activeadmin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

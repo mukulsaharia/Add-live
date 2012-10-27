@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  que: MyString
+  ans: MyString
+  client_id: 1
+  totalclicks: 1
+  usedclicks: 1
+  amount: MyString
+
+two:
+  que: MyString
+  ans: MyString
+  client_id: 1
+  totalclicks: 1
+  usedclicks: 1
+  amount: MyString

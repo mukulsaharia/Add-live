@@ -1,15 +1,15 @@
-class User < ActiveRecord::Base
-  has_one :pin
+class Client < ActiveRecord::Base
+  has_many :adss
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
-  # :lockable and :omniauthable
+  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :authentication_keys => [:login]
+         :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-attr_accessible :email, :password, :password_confirmation,:fname,:lname,:registration_type,:state,:sponserID,:jpin,:contactno,:address,:city,:pincode,:nameofbank,:accountno,:ifscno,:panno,:username,:login,:packagetype
-
-validates_uniqueness_of :username
+  attr_accessible :email, :password, :password_confirmation, :username, :contactno, :address, :city, :category, :adscount, :fname, :lname
+  # attr_accessible :title, :body
+  validates_uniqueness_of :username
   # attr_accessible :title, :body
   attr_accessor :login
 
@@ -21,5 +21,4 @@ validates_uniqueness_of :username
         where(conditions).first
       end
     end
-
 end

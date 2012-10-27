@@ -17,16 +17,29 @@
 
 			    <div class="span2 offset7">
 
-					  <% if user_signed_in? %><b>
-					    Welcome, <%= current_user.fname %> </b>
+					  <% if user_signed_in? %>
+						<b>
+					    	Welcome, <%= current_user.fname %> 
+						</b>
 					    <div class="header_sign_out">
 					    	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 						</div>
 					  <% else %>
-					    Welcome, Guest
-					    <p><%= link_to "sign in", new_user_session_path %><p>
+					  	<% if client_signed_in? %>
+						<b>
+					    	Welcome, <%= current_client.fname %> 
+						</b>
+					    <div class="header_sign_out">
+					    	<%= link_to "Sign out", destroy_client_session_path, :method => :delete %>
+						</div>
+					  <% else %>
+					    <b>Welcome, Guest</b>
+					    <% end %> <p>
 					  <% end %>
-					
+						<%= Time.now.strftime("%d-%m-%Y") %>
+						
+
+
 			    </div>
 	    	 </div>	
 		    </div>

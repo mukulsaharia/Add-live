@@ -11,7 +11,90 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002213124) do
+ActiveRecord::Schema.define(:version => 20121026091022) do
+
+  create_table "active_admin_comments", :force => true do |t|
+    t.string   "resource_id",   :null => false
+    t.string   "resource_type", :null => false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.text     "body"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "namespace"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
+  add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
+  add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
+
+  create_table "admin_users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "username"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
+  add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "ads", :force => true do |t|
+    t.string   "que"
+    t.string   "ans"
+    t.integer  "client_id"
+    t.integer  "totalclicks"
+    t.integer  "usedclicks"
+    t.string   "amount"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "username"
+    t.string   "address"
+    t.string   "contactno"
+    t.string   "city"
+    t.string   "category"
+    t.integer  "adscount",               :default => 0
+    t.string   "state"
+    t.integer  "pincode"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "clients", ["email"], :name => "index_clients_on_email", :unique => true
+  add_index "clients", ["reset_password_token"], :name => "index_clients_on_reset_password_token", :unique => true
+
+  create_table "pins", :force => true do |t|
+    t.string   "jpin"
+    t.boolean  "used",              :default => false
+    t.integer  "user_id"
+    t.string   "packagetype"
+    t.string   "registration_type"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -24,6 +107,7 @@ ActiveRecord::Schema.define(:version => 20121002213124) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "username"
     t.string   "fname"
     t.string   "lname"
     t.string   "registration_type"
@@ -38,11 +122,13 @@ ActiveRecord::Schema.define(:version => 20121002213124) do
     t.string   "accountno"
     t.string   "ifscno"
     t.string   "panno"
+    t.string   "packagetype"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
 end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  jpin: MyString
+  used: false
+  user_id: 1
+  amount: 1
+
+two:
+  jpin: MyString
+  used: false
+  user_id: 1
+  amount: 1

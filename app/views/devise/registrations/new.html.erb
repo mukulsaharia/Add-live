@@ -46,6 +46,24 @@
 
 						<div class="control-group">
 							<div class="control-label">
+								<%= f.label "Package Type" %>
+							</div>
+							<div class="controls">
+								<%= f.select(:packagetype, options_for_select([['Silver','Silver'], ['Gold','Gold'],['Platinum','Platinum']])) %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
+								<%= f.label "User name" %>
+							</div>
+							<div class="controls">
+								<%= f.text_field :username %>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="control-label">
 								<%= f.label :password %>
 							</div>
 							<div class="controls">
