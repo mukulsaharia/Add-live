@@ -1,0 +1,18 @@
+<label class="heading_lable">My Ads</label>
+
+<table class="table table-hover" >
+	<tr><td><b>Ads ID</b></td><td><b>Orgnization name</b></td><td><b>Category</b></td></tr>
+	<% @c=0 %>
+	<% for i in @ads %>
+
+	<% if i.client_id == current_client.id %>
+	<% @c=@c+1 %>
+		<tr><td><%= i.id %></td>
+			<td><%= i.orgname %></td> 
+			<td><%= i.category %></td></tr>
+		<% end %>
+	<% end %>
+
+</table>
+<hr>
+<label class="heading_lable">You have <%= @c%> ads.</label>

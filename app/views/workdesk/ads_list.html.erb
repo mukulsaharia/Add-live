@@ -1,10 +1,10 @@
-this is ads_list page
+<label class="heading_lable">Ads</label>
 
-<table class="table" border="2" padding="10">
-	<tr><td>Ads ID</td><td>Orgnisation name</td><td>Category</td></tr>
+<table class="table table-hover" >
+	<tr><td><b>Ads ID</b></td><td><b>Orgnization name</b></td><td><b>Category</b></td></tr>
 	<% for i in @ads %>
 	<tr><td><%= i.id %></td>
 		<td><%= i.orgname %></td> 
-		<td><%= i.category %></td></tr></tr>
+		<td><%= i.category %></td></tr>
 	<% end %>
 </table>

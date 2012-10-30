@@ -6,7 +6,7 @@ namespace :db do
     
     [Ads,Pin].each(&:delete_all)
 
-    Pin.populate 10 do |pin|
+    Pin.populate 5 do |pin|
       pin.jpin=Populator.words(1..1).titleize
       pin.packagetype=["Silver", "Gold","Platinum"]
       pin.registration_type=["Associate"]
@@ -20,12 +20,13 @@ namespace :db do
       pin.used=false
     end
 
-    Ads.populate 10 do |ads|
-      ads.que=Populator.sentences(1..1)
-      ads.ans=Populate.words(1..1)
+    Ads.populate 50 do |ads|
+      ads.que=Populator.words(1..1)
+      ads.ans=Populator.words(1..1)
       ads.totalclicks=[1000,1200,1500,2000]
-      ads.orgname=Populate.words(1..1)
+      ads.orgname=Populator.words(1..1)
       ads.category=["Cards and printers", "paint","Education","hardware"]
+      ads.client_id=[1,2,3,4]
     end   
     
   end
