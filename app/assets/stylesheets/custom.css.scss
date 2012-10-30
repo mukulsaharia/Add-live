@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+body{
+	background-color: cyan
+}
+
 .container{
 	width: 1000px;
 }
@@ -8,9 +12,9 @@
 }
 .index_page{
 	background-color:#EAEAEB;
-	border-radius: 5px;
-	border-right: 5px solid #D7D7DA;
-	border-bottom: 5px solid #D7D7DA;
+	box-shadow: 10px 10px 5px black;
+	
+
 }
 .title_tag{
 	margin-top: 25px;
@@ -34,7 +38,7 @@
 	width:225px;
 }
 
-.span3{
+.spa3{
 	margin-left: 0;
     padding-left: 10px;
     border-left: 2px solid white;
@@ -70,13 +74,10 @@ a{color:#DCD8D8;}
 	}
 .logoc
 {
+background: url('bkgd-abstractcards.png');
+
 	margin-top: -50px;
 	margin-bottom:5px;
-}
-.logoc :hover
-{
-	
-	
 }
 
 

@@ -3,9 +3,10 @@ class WorkdeskController < ApplicationController
 
 	def index
 		@user=current_user.fname
+		@ads=Ads.find(:all, :order => "RANDOM()")
 	end
+
 	def profile
 	 	
 	end
-
 end

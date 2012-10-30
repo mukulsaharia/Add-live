@@ -7,7 +7,7 @@ class Client < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :username, :contactno, :address, :city, :category, :adscount, :fname, :lname
+  attr_accessible :email, :password, :password_confirmation, :username, :contactno, :address, :city, :category, :adscount, :fname, :lname,:encrypted_password,:state, :pincode
   # attr_accessible :title, :body
   validates_uniqueness_of :username
   # attr_accessible :title, :body

@@ -1,0 +1,8 @@
+this is ads_list page
+
+<table border="2" padding="10"><tr><td>Ads ID</td><td>Orgnisation name</td></tr>
+	<% for i in @ads %>
+	<tr><td><%= i.id %></td>
+		<td><%= i.orgname %> </td> </tr>
+	<% end %>
+</table>

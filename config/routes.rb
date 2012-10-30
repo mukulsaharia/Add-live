@@ -24,6 +24,9 @@ end
   match '/plan', to: 'staticpage#plan'
   match '/support', to: 'staticpage#support'
   match '/whyaddlive', to: 'staticpage#whyaddlive'
+  match '/statistics', to: 'staticpage#statistics'
+  match '/ads/index', to: 'ads#index'
+  match '/workdesk/ads_list', to: 'workdesk#ads_list'
 
 
   match '/signup', to: 'users#new'

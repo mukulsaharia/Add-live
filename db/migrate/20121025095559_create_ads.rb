@@ -7,6 +7,8 @@ class CreateAds < ActiveRecord::Migration
       t.integer :totalclicks
       t.integer :usedclicks
       t.string :amount
+      t.string :orgname
+      t.string :category
 
       t.timestamps
     end
