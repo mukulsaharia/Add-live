@@ -1,8 +1,10 @@
 this is ads_list page
 
-<table border="2" padding="10"><tr><td>Ads ID</td><td>Orgnisation name</td></tr>
+<table class="table" border="2" padding="10">
+	<tr><td>Ads ID</td><td>Orgnisation name</td><td>Category</td></tr>
 	<% for i in @ads %>
 	<tr><td><%= i.id %></td>
-		<td><%= i.orgname %> </td> </tr>
+		<td><%= i.orgname %></td> 
+		<td><%= i.category %></td></tr></tr>
 	<% end %>
 </table>
