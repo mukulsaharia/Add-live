@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
   <title>Add-Live | <%= yield(:title)%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
 </head>
+
 <body>
 	
 	    <div class="container">
 
 	       	<div class="logoc">
 	       		<div class="span3">
-		      <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
+		      		<%= link_to image_tag("logo_new.png"), root_path, id: "logo" %>
 		    	</div>
 
-			    <div class="span2 offset7">
+			    	<div class="span2 offset7">
 
 					  <% if user_signed_in? %>
 						<b>
@@ -37,10 +39,7 @@
 					    <% end %> <p>
 					  <% end %>
 						<%= Time.now.strftime("%d-%m-%Y") %>
-						
-
-
-			    </div>
+					</div>
 	    	 </div>	
 		    </div>
 		    

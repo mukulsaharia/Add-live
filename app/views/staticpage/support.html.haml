@@ -3,10 +3,12 @@
 	= yield(:title)
 .index_page
 	.container
-		.span9
+		.span8
 			.title_tag
 				=image_tag("title241x40.png")
 			.title_line
 				Support
 			.page_data
 				this is a testing data
+		.span4
+			= render :template => "staticpage/side_bar"

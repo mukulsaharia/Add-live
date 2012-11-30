@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body{
-	background-color: white
+	background-image:url('boxes-background.jpg');
 }
 
 .container{
@@ -11,8 +11,9 @@ body{
 	width:200px;
 }
 .index_page{
-	background-color:#EAEAEB;
-	box-shadow: 10px 10px 5px black;
+	background-color:black;
+		
+	box-shadow: 0px 0px 15px gray;
 	
 
 }
@@ -41,7 +42,7 @@ body{
 .spa3{
 	margin-left: 0;
     padding-left: 10px;
-    border-left: 2px solid white;
+    border-left: 1px solid white;
 }
 .form-inline{
 	margin-top:0px;
@@ -49,8 +50,11 @@ body{
 .members_area{
 	margin-top:35px;
 	margin-bottom:20px;
-	font-size:130%;
-	color: gray;
+	font-size:110%;
+	color: #03417C;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+	font-face: Arial Rounded MT Bold;
+	
 }
 .login_button{
 	margin-left:130px;
@@ -69,14 +73,19 @@ a{color:#DCD8D8;}
 	margin-bottom:15px;
 }
 #logo {
-	font-size: 30px;
+	font-size: 50%;
 	text-decoration: none;
 	}
 .logoc
 {
-
+	color: orange;
 	margin-top: -50px;
+	font-size: 13px;
 	margin-bottom:5px;
+}
+
+.logoc a:hover{
+	color:orange;
 }
 
 
@@ -183,5 +192,19 @@ H2 {font-size: 15px;}
 }
 .workdesk_parts{
 	margin-top:25px;
-
+}
+.single-shadow
+{
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.ads_tag{
+	margin-top: 0px;
+	margin-left:-30px;
+}
+.ads_line{
+	margin-top: -35px;
+	margin-left:10px;
+	font-family:Broadway;
+	font-size:135%;
+	color:white;
 }

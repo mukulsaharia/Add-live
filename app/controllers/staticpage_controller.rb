@@ -9,5 +9,9 @@ def statistics
 @ads= Ads.all
 end
 
+def mukul
+end
+	
+
 
 end

@@ -12,9 +12,9 @@
 					<div class="tabbable"> <!-- Only required for left/right tabs -->
 					  <ul class="nav nav-tabs">
 					    <li class="active"><a href="#tab1" data-toggle="tab">Ads</a></li>
-					    <li><a href="#tab2" data-toggle="tab">Profile</a></li>
-					    <li><a href="#tab3" data-toggle="tab">Earning</a></li>
-					    <li><a href="#tab4" data-toggle="tab">Referrals</a></li>
+					    <li><a href="#tab2" data-toggle="tab">Earning</a></li>
+					    <li><a href="#tab3" data-toggle="tab">Referrals</a></li>
+					    <li><a href="#tab4" data-toggle="tab">My Profile</a></li>
 					  </ul>
 
 					  <div class="tab-content">
@@ -22,13 +22,13 @@
 					      <%= render :template => 'workdesk/ads_list' %>
 					    </div>
 					    <div class="tab-pane" id="tab2">
-					      <%= render :template => 'workdesk/profile' %>
+					      This is earning phase.
 					    </div>
 					    <div class="tab-pane" id="tab3">
-					      <p>Howdy, I'm in Section 3.</p>
+					      <%= render :template => 'workdesk/refer' %>
 					    </div>
 					    <div class="tab-pane" id="tab4">
-					      <p>Howdy, I'm in Section 4.</p>
+					      <%= render :template => 'workdesk/profile' %>
 					    </div>
 
 					  </div>
