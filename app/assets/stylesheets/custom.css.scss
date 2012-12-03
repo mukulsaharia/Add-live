@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body{
-	background-image:url('boxes-background.jpg');
+	background-image:url('Black-painted-brick-wall-texture-picture-free-photograph-photos.jpg');
 }
 
 .container{
@@ -12,7 +12,7 @@ body{
 }
 .index_page{
 	background-color:black;
-		
+	background-image:url('boxes-background.jpg');
 	box-shadow: 0px 0px 15px gray;
 	
 
@@ -42,7 +42,7 @@ body{
 .spa3{
 	margin-left: 0;
     padding-left: 10px;
-    border-left: 1px solid white;
+    border-left: 1px solid #363451;
 }
 .form-inline{
 	margin-top:0px;
@@ -60,9 +60,7 @@ body{
 	margin-left:130px;
 	
 }
-.signup_button {
-	margin-top: 10px;
-}
+
 a{color:#DCD8D8;}
 .signup_button :hover{
 	text-decoration:none;
@@ -172,11 +170,11 @@ H2 {font-size: 15px;}
 	color:black;
 }
 .signup_button{
-	color: black;
+	color: orange;
 }
 
 .signup_button a{
-	color: black;
+	color: grey;
 }
 .signup_button :hover{
 	color: orange;
