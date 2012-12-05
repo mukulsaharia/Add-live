@@ -4,4 +4,7 @@ class AdsController < ApplicationController
 		@ads= Ads.all
 	end
 
+	def create
+	end
+
 end
