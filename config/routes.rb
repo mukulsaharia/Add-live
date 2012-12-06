@@ -5,7 +5,7 @@ AddLive::Application.routes.draw do
 
   devise_for :clients
   resources :client
-
+  resources :ads
   resources :pin
   devise_for :users
   devise_for :users do
@@ -27,7 +27,7 @@ end
   match '/statistics', to: 'staticpage#statistics'
   match '/ads/index', to: 'ads#index'
   match '/workdesk/ads_list', to: 'workdesk#ads_list'
-
+  match '/ads/:id', to: 'ads#show'
 
   match '/signup', to: 'users#new'
   match '/Workdesk', to: 'Workdesk#index'
