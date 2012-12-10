@@ -1,3 +1,34 @@
-<%= @ads1.id %><br>
-<%= @ads1.orgname %><br>
-<%= image_tag @ads1.photo.url %><br>
+<div class ="index_page">
+	<div class="span9">
+		<div class="title_tag">
+			<%=image_tag("title241x40.png") %>
+		</div>
+		<div class="title_line">
+			 Paid Ads
+		</div>
+	</div>	
+	<br>
+		<% if @do_not_open_without_link==1 %>
+		<div class="show_ads_id">
+			Advertiesment ID : <%= @ads1.id %><br>
+		</div>
+		<div class="show_ads_orgname">
+			<%= @ads1.orgname %><br>
+		</div>
+		<div class="show_ads_picture">	
+			<%= image_tag @ads1.photo.url %><br>
+		</div>
+		<div class="ads_que_ans">
+			<table cellpadding="7">
+				<tr><td>Question :</td><td><%= @ads1.que %></td></tr>
+				<tr><td>Answer</td><td></td></tr>
+			</table>
+		</div>
+		<div class="ads_end">
+			<%= %>
+			<% @do_not_open_without_link=0 %>
+			<div>
+
+		<% end %>
+	
+</div>
