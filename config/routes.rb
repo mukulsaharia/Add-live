@@ -8,6 +8,7 @@ AddLive::Application.routes.draw do
   resources :ads
   resources :pin
   devise_for :users
+  resources :clicks
   devise_for :users do
   get '/users/sign_out' => 'devise/sessions#destroy'
 end
@@ -32,7 +33,9 @@ end
   match '/signup', to: 'users#new'
   match '/Workdesk', to: 'Workdesk#index'
   match '/client', to: 'client#index'
-
+  match '/check', to: 'ads#check'
+  match '/fail', to: 'ads#fail'
+  match '/success', to: 'ads#success'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
