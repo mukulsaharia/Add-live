@@ -4,7 +4,7 @@ class WorkdeskController < ApplicationController
 	def index
 		@count=1
 		@user=current_user.fname
-		@ads=Ads.find(61)
+		@ads=Ads.find(:all, :order => "RANDOM()", :limit => 10)
 		@refer_list=User.where("sponserID=?",current_user.username)
 	end
 

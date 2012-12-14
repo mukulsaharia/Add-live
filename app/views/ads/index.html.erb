@@ -8,7 +8,7 @@
 		</div>
 	</div>	
 	<br>
-		<% if @do_not_open_without_link==1 %>
+		<% if $do_not_open_without_link==1 %>
 		<div class="show_ads_id">
 			Advertiesment ID : <%= $ads1.id %><br>
 		</div>
@@ -27,8 +27,8 @@
 			</table>
 		</div>
 		<div class="ads_end">
-			<%= %>
-			<% @do_not_open_without_link=0 %>
+			
+			<% $do_not_open_without_link=1 %>
 			<div>
 
 		<% end %>

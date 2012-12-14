@@ -1,11 +1,12 @@
 class AdsController < ApplicationController
 	before_filter :authenticate_user!
-	
+		$do_not_open_without_link=1
 	def index
 		@ads= Ads.all
-		@do_not_open_without_link=1
-		if @do_not_open_without_link==1
+		if $do_not_open_without_link==1
 			$ads1=Ads.find(params[:id])
+		else
+			redirect_to '/Workdesk'
 		end
 	end
 
@@ -26,8 +27,4 @@ class AdsController < ApplicationController
 		end
 		
 	end
-
-	
-
-
 end
