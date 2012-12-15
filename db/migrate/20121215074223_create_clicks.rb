@@ -4,6 +4,8 @@ class CreateClicks < ActiveRecord::Migration
       t.string :ans
       t.integer :user_id
       t.integer :ads_id
+      t.integer :id
+      
 
       t.timestamps
     end

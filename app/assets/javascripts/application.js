@@ -15,6 +15,6 @@
 //= require_tree .
 $(document).ready(function() {
   $(".ads_open").click(function() {
-   
+   	
   });
 });
