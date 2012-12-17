@@ -9,6 +9,7 @@
 			<div class="title_line">
 				<%=yield(:title) %>
 			</div>
+			<% if current_user.frenchise == false %>
 				<div class="workdesk_parts">	
 					<div class="tabbable"> <!-- Only required for left/right tabs -->
 					  <ul class="nav nav-tabs">
@@ -35,6 +36,43 @@
 					  </div>
 					</div>
 				</div>
+			<% else %>
+				<div class="workdesk_parts">	
+					<div class="tabbable"> <!-- Only required for left/right tabs -->
+					  <ul class="nav nav-tabs">
+					    <li class="active"><a href="#tab1" data-toggle="tab">Ads</a></li>
+					    <li><a href="#tab2" data-toggle="tab">Earning</a></li>
+					    <li><a href="#tab3" data-toggle="tab">Referrals</a></li>
+					    <li><a href="#tab4" data-toggle="tab">My Profile</a></li>
+					    <li><a href="#tab5" data-toggle="tab">Used Pins</a></li>
+					    <li><a href="#tab6" data-toggle="tab">Unused Pins</a></li>
+					  </ul>
+
+					  <div class="tab-content">
+					    <div class="tab-pane active" id="tab1">
+					      <%= render :template => 'workdesk/ads_list' %>
+					    </div>
+					    <div class="tab-pane" id="tab2">
+					      This is earning phase.
+					    </div>
+					    <div class="tab-pane" id="tab3">
+					      <%= render :template => 'workdesk/refer' %>
+					    </div>
+					    <div class="tab-pane" id="tab4">
+					      <%= render :template => 'workdesk/profile' %>
+					    </div>
+					    <div class="tab-pane" id="tab5">
+					       this is Used pins section 
+					    </div>
+					    <div class="tab-pane" id="tab6">
+					       this is Unused pins section 
+					    </div>
+
+					  </div>
+					</div>
+				</div>
+			<% end %>
+
 			
 		</div>
 	</div>

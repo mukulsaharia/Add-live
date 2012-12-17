@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :authentication_keys => [:login]
 
   # Setup accessible (or protected) attributes for your model
-attr_accessible :email, :password, :password_confirmation,:fname,:lname,:registration_type,:state,:sponserID,:jpin,:contactno,:address,:city,:pincode,:nameofbank,:accountno,:ifscno,:panno,:username,:login,:packagetype
+attr_accessible :email, :password, :password_confirmation,:fname,:lname,:registration_type,:state,:sponserID,:jpin,:contactno,:address,:city,:pincode,:nameofbank,:accountno,:ifscno,:panno,:username,:login,:packagetype,:frenchise
 
 validates_uniqueness_of :username
   # attr_accessible :title, :body
