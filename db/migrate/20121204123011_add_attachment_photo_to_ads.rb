@@ -1,5 +1,6 @@
 class AddAttachmentPhotoToAds < ActiveRecord::Migration
   def self.up
+  	
     
   end
 

@@ -9,6 +9,10 @@ class CreateAds < ActiveRecord::Migration
       t.string :amount
       t.string :orgname
       t.string :category
+      t.string :photo_file_name
+      t.string :photo_content_type
+      t.string :photo_file_size
+      t.datetime :photo_updated_at
 
       t.timestamps
     end

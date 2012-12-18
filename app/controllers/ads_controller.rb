@@ -23,8 +23,8 @@ class AdsController < ApplicationController
 
 	def check
 		if params[:ans] == $ads1.ans
-			@click=Clicks.new
-			@click.create(:user_id => current_user.id, :ads_id => $ads1.id, :ans => params[:ans])
+			#@click=Clicks.new
+			#@click.create(:user_id => current_user.id, :ads_id => $ads1.id, :ans => params[:ans])
 			redirect_to '/success'
 		else
 			redirect_to '/fail'
