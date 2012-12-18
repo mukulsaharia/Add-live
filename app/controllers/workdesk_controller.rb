@@ -6,6 +6,7 @@ class WorkdeskController < ApplicationController
 		@user=current_user.fname
 		@ads=Ads.find(:all, :order => "RANDOM()", :limit => 10)
 		@refer_list=User.where("sponserID=?",current_user.username)
+		@pins= Pin.where("frenchisename=?",current_user.username)
 	end
 
 end

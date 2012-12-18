@@ -6,6 +6,7 @@ class CreatePins < ActiveRecord::Migration
       t.integer :user_id
       t.string :packagetype
       t.string :registration_type
+      
       t.timestamps
       
     end

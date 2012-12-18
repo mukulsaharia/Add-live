@@ -1,0 +1,21 @@
+<label class="heading_lable">Refrals</label>
+
+<table class="table table-hover" >
+	<tr>
+		<td><b>Serial no</b></td>
+		<td><b>Joining pin</b></td>
+		<td><b>package</b></td>
+	</tr>
+
+	<% for i in @pins %>
+	<% if i.frenchisename == current_user.username and i.used == false %>
+		<tr>
+			<td><b><%= @count %></b>
+			</td><td><%= i.jpin %></td>
+			<td><%= i.packagetype %></td> 
+			
+			<% @count=@count+1 %>
+		</tr>
+	<% end %>	
+	<% end %>
+</table>

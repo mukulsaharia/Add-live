@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217095424) do
+ActiveRecord::Schema.define(:version => 20121218091206) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20121217095424) do
     t.string   "registration_type"
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
+    t.string   "frenchisename"
   end
 
   create_table "users", :force => true do |t|
@@ -136,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20121217095424) do
     t.string   "packagetype"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.string   "frenchisename"
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
