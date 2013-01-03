@@ -9,30 +9,42 @@
 		</div>
 	</div>	
 	<br>
-		<% if $do_not_open_without_link==1 %>
-		<div class="show_ads_id">
-			Advertiesment ID : <%= $ads1.id %><br>
-		</div>
-		<div class="show_ads_orgname">
-			<%= $ads1.orgname %><br>
-		</div>
-		<div class="show_ads_picture">	
-			<%= image_tag $ads1.photo.url %><br>
-		</div>
-		<div class="ads_que_ans">
-			<table cellpadding="7">
-				<tr><td>Question :</td><td><%= $ads1.que %></td></tr>
-				<tr><td>Answer</td><td>
-					<%= render :template => "/ads/new" %>
-				</td></tr>
-			</table>
-		</div>
-		<div class="ads_end">
-			
-			<% $do_not_open_without_link=1 %>
-			<div>
-
+		<% @display_ads=0 %>
+		<% for i in @chk_clicks %>
+			<% if $ads1.id == i.ads_id and i.user_id == current_user.id and i.created_at.to_date == Date.today%>
+				<% @display_ads =1 %>
+				<% break %>
+			<% end %>
 		<% end %>
+			<% if @display_ads==1 %>
+				<div class ="add_result_text">
+					<%= "Locked...!!!" %>
+				</div>
+			<% elsif @display_ads==0 %>
+				<div class="show_ads_id">
+					Advertiesment ID : <%= $ads1.id %><br>
+				</div>
+				<div class="show_ads_orgname">
+					<%= $ads1.orgname %><br>
+				</div>
+				<div class="show_ads_picture">	
+					<%= image_tag $ads1.photo.url %><br>
+				</div>
+				<div class="ads_que_ans">
+					<table cellpadding="7">
+						<tr><td>Question :</td><td><%= $ads1.que %></td></tr>
+						<tr><td>Answer</td><td>
+							<%= render :template => "/ads/new" %>
+						</td></tr>
+					</table>
+				</div>
+				<div class="ads_end">
+					
+					
+				</div>							
+			<% end %>
+		
+
 	
 </div>
 </body>

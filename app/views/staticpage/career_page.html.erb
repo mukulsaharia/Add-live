@@ -1,0 +1,51 @@
+<%=provide(:title, "job page") %>
+<div class="index_page">
+	<div class="container">	
+		<div class="span12">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				<%=yield(:title) %>
+			</div>
+			<div class="span8 offset2">
+				<div class="workdesk_parts career_data">
+					<table cellpadding="10">
+						<tr>
+							<td>Company Name</td><td>:</td>
+							<td><%= @career1.company %></td>
+						</tr>
+						<tr>
+							<td>Job profile</td><td>:</td>
+							<td><%= @career1.jobprofile %></td>
+						</tr>
+						<tr>	
+							<td>Eligbility</td><td>:</td>
+							<td><%= @career1.eligbility %></td>
+						</tr>
+						<tr>
+							<td>Contact Person</td><td>:</td>
+							<td><%= @career1.contactperson %></td>
+						</tr>
+						<tr>
+							<td>Address</td><td>:</td>
+							<td><%= @career1.address %></td>
+						</tr>
+						<tr>
+							<td>Contact number</td><td>:</td>
+							<td><%= @career1.contactno %></td>
+						</tr>
+						<tr>
+							<td>Posting Date</td><td>:</td>
+							<td><%= @career1.created_at.strftime("%d %b. %Y") %></td>
+						</tr>
+						<tr>
+							<td>Reamrk</td><td>:</td>
+							<td><%= @career1.remark %></td>
+						</tr>
+					</table>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>

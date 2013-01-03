@@ -7,4 +7,8 @@ class ClientController < ApplicationController
 	
 	end
 
+	def full_ads
+		@full_ads=Ads.find(params[:id])
+	end
+
 end

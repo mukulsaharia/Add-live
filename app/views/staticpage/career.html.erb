@@ -1,0 +1,42 @@
+<%=provide(:title, 'Career') %>
+<div class="index_page">
+	<div class="container">	
+		<div class="span12">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				<%=yield(:title) %>
+			</div>
+			<div class="workdesk_parts">
+				<label class="heading_lable"><%=image_tag("career.png") %></label>
+				<% @career_count =1 %>
+				<table class="table table-bordered career_data">
+					<tr>
+						<th> # </th>
+						<th> Company </th>
+						<th> Job profile </th>
+						<th> Eligbility </th>
+						<th> more info </th>
+					</tr>
+
+					<% for i in @career %>
+					<tr>
+						<td><%= @career_count%> <% @career_count +=1 %></td>
+						<td><%= i.company %></td> 
+						<td><%= i.jobprofile %></td>
+						<td><%= i.eligbility %></td>
+						<td><%= link_to "Click here...",:action => "career_page",:id => i.id %></td>
+					</tr>
+					<% end %>
+	  
+				</table>
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+</div>

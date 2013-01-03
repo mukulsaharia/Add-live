@@ -1,0 +1,4 @@
+class Points < ActiveRecord::Base
+  belongs_to :user
+  attr_accessible :points, :user_id
+end

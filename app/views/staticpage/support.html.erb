@@ -1,0 +1,28 @@
+<%=provide(:title, 'Support') %>
+<div class="index_page">
+	<div class="container">	
+		<div class="span9">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				<%=yield(:title) %>
+			</div>
+			<div class="span6 offset2">
+			<div class="workdesk_parts">
+				<label class="heading_lable">Contact Person</label>
+
+				<table class="table table-hover" >
+					<tr><td><b>Name</b></td><td><b>City</b></td><td><b>Contact no</b></td></tr>
+					<% for i in @support %>
+					<tr><td><%= i.fname %></td>
+						<td><%= i.city %></td> 
+						<td><%= i.contactno %></td></tr>
+					<% end %>
+				</table>
+			</strong>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

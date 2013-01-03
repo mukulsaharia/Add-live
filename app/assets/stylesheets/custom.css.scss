@@ -1,7 +1,8 @@
 @import "bootstrap";
 
 body{
-	background-image:url('boxes-background-resize.jpg');
+	background-color: black;
+	color: grey;
 }
 
 .container{
@@ -212,13 +213,13 @@ H2 {font-size: 15px;}
 .show_ads_id{
 	margin-top: 45px;
 	margin-left:25px;
-	font-family:stencil;
+	
 	font-size:135%;
 }
 .show_ads_orgname{
 	margin-top: 5px;
 	margin-left:25px;
-	font-family:stencil;
+	
 	font-size:135%;
 }
 .show_ads_picture{
@@ -233,4 +234,9 @@ H2 {font-size: 15px;}
 	font-weight: bold;
 	background-color: White;
 	margin-right: 25px;
+}
+
+.full_ads{
+	font-size:120%;
+	margin-bottom: 25px;
 }

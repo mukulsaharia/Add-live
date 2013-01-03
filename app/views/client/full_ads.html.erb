@@ -1,0 +1,57 @@
+<body>
+<div class ="index_page">
+	<div class="container">
+		<div class="span12">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				 Full Ads Page
+			</div>
+			
+		<br>
+			<div class="span 8 offset2">
+				<div class="workdesk_parts career_data full_ads">
+					<table cellpadding="10">
+						<tr>
+							<td>Advertiesment ID</td><td>:</td>
+							<td><%= @full_ads.id %></td>
+						</tr>
+						<tr>
+							<td>Orgnisation name</td><td>:</td>
+							<td><%= @full_ads.orgname %></td>
+						</tr>
+						<tr>
+							<td>Question</td><td>:</td>
+							<td><%= @full_ads.que %></td>
+						</tr>
+						<tr>
+							<td>Answer</td><td>:</td>
+							<td><%= @full_ads.ans %></td>
+						</tr>
+						<tr>
+							<td>Total clicks</td><td>:</td>
+							<td><%= @full_ads.totalclicks %></td>
+						</tr>
+						<tr>
+							<td>Used Clicks</td><td>:</td>
+							<td><%= @full_ads.usedclicks %></td>
+						</tr>
+					</table>
+				</div>
+			<div class ="full_ads">	
+			<%= image_tag @full_ads.photo.url %>
+			</div>
+			</div>
+		</div>	
+	</div>	
+
+	
+</div>
+</body>
+
+<script language="JavaScript">
+<!--
+  javascript:window.history.forward(1);
+//-->
+</script>
