@@ -6,11 +6,6 @@
 				= current_user.fname
 				= current_user.lname
 		.members_area
-			%strong Your Earnings :
-			.signup_button
-				= current_user.fname
-				= current_user.lname
-		.members_area
 			.signup_button
 				=link_to "Go to Workdesk",'Workdesk#index'
 	-else

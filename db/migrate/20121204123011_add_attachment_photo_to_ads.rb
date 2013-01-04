@@ -4,6 +4,6 @@ class AddAttachmentPhotoToAds < ActiveRecord::Migration
   end
 
   def self.down
-    drop_attached_file :ads, :photo
+    
   end
 end

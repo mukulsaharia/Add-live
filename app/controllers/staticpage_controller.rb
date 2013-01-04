@@ -23,5 +23,10 @@ def career_page
 	@career1=Career.find(params[:id])
 end
 
+def side_bar
+
+end
+
+
 
 end

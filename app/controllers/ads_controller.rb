@@ -28,13 +28,13 @@ class AdsController < ApplicationController
 			#@countused=$ads1.usedclicks
 			$ads1.update_attributes(:usedclicks => $ads1.usedclicks+1)
 			if current_user.packagetype == "Silver"
-				@ads_success_point = 5
+				@ads_success_point = 0.050
 			elsif current_user.packagetype == "Gold"
-				@ads_success_point = 7
+				@ads_success_point = 0.075
 			elsif current_user.packagetype == "Platinum"
-				@ads_success_point = 10
+				@ads_success_point = 0.100
 			end
-			Points.create(:user_id => current_user.id, :points => @ads_success_point)
+			Points.create(:user_id => current_user.id, :points => @ads_success_point, :Referal => false , :Ads_id => $ads1.id)
 
 			redirect_to '/success'
 		else
