@@ -1,0 +1,2 @@
+<%= collection_select(:post, :ads_id, Need.select("DISTINCT(city)"), :id, :city) %>
+<%= collection_select(:post, :ads_id, Need.select("DISTINCT(CATEGORY)"), :id, :category) %>

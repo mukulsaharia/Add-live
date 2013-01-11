@@ -30,7 +30,7 @@ end
   match '/ads/index', to: 'ads#index'
   match '/workdesk/ads_list', to: 'workdesk#ads_list'
   match '/ads/:id', to: 'ads#show'
-
+  match '/searchyourneed', to: 'staticpage#need'
   match '/signup', to: 'users#new'
   match '/Workdesk', to: 'Workdesk#index'
   match '/client', to: 'client#index'

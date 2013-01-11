@@ -1,0 +1,14 @@
+
+	<div id="slideshow1"> 
+		<%= image_tag @ads1.photo.url %>
+		<%= image_tag @ads2.photo.url %>
+		<%= image_tag @ads3.photo.url %>
+	</div>
+    
+<script>
+$(function() {
+    $('#slideshow1').cycle();
+});
+
+</script>
+

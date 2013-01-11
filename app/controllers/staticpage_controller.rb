@@ -1,7 +1,10 @@
 class StaticpageController < ApplicationController
 
 def index
-	
+	@ads1=Ads.find(4)
+	@ads2=Ads.find(2)
+	@ads3=Ads.find(3)
+	@roles=Ads.all
 end
 
 def statistics
