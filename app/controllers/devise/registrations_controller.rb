@@ -12,7 +12,7 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource
     @pins=Pin.all
-    @flag_pin=0
+    @flag_pin=1
     @pins.each do |pin|
       if resource.jpin == pin.jpin and pin.used == false and resource.packagetype ==pin.packagetype and resource.registration_type == pin.registration_type
         @flag_pin=1
@@ -23,6 +23,7 @@ class Devise::RegistrationsController < DeviseController
 
     if @flag_pin == 1
     if resource.save
+      
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_in(resource_name, resource)

@@ -1,0 +1,43 @@
+<%=provide(:title, 'Paid History') %>
+<div class="index_page">
+	<div class="container">	
+		<div class="span9">
+			<div class="title_tag">
+				<%=image_tag("title241x40.png") %>
+			</div>
+			<div class="title_line">
+				<%=yield(:title) %>
+			</div>
+			<div class="span6 offset2">
+			<div class="workdesk_parts">
+				<label class="heading_lable">Paid History</label>
+
+					<table class="table " >
+						<tr>
+							<td><b>Serial no</b></td>
+							<td><b>Points</b></td>
+							<td><b>Paid Date</b></td>
+						</tr>
+						<% @count=1 %>
+						<% for i in @paid_history %>
+							<tr>
+								<td><b><%= @count %></b>
+								</td><td><%= i.points %></td>
+								<td><%= i.PaidDate %></td> 
+								
+								<% @count=@count+1 %>
+							</tr>
+						<% end %>
+
+							<tr><td></td><td></td>
+								<td><%= link_to "Go to Workdesk", 'workdesk#index' %>
+								</td></tr>
+					</table>
+
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

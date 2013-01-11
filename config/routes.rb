@@ -39,7 +39,8 @@ end
   match '/success', to: 'ads#success'
   match '/career_page/:id', to: 'staticpage#career_page'
   match '/full_ads/:id', to: 'client#full_ads'
- 
+  match '/workdesk/create_request', to: 'workdesk#create_request'
+  match 'workdesk/paid_history', to: 'workdesk#paid_history'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
