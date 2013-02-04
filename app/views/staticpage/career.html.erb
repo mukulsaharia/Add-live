@@ -17,6 +17,7 @@
 						<th> Company </th>
 						<th> Job profile </th>
 						<th> Eligbility </th>
+						<th> Posting Date </th>
 						<th> more info </th>
 					</tr>
 
@@ -26,6 +27,7 @@
 						<td><%= i.company %></td> 
 						<td><%= i.jobprofile %></td>
 						<td><%= i.eligbility %></td>
+						<td><%= i.created_at.strftime("%d %b. %Y") %></td>
 						<td><%= link_to "Click here...",:action => "career_page",:id => i.id %></td>
 					</tr>
 					<% end %>

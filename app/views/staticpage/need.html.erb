@@ -1,2 +1,21 @@
-<%= collection_select(:post, :ads_id, Need.select("DISTINCT(city)"), :id, :city) %>
-<%= collection_select(:post, :ads_id, Need.select("DISTINCT(CATEGORY)"), :id, :category) %>
+<%=provide(:title, 'Your Needs') %>
+<div class="index_page">
+  <div class="container"> 
+    <div class="span12">
+      <div class="title_tag">
+        <%=image_tag("title241x40.png") %>
+      </div>
+      <div class="title_line">
+        <%=yield(:title) %>
+      </div>
+      <div class="workdesk_parts">
+        <div class ="city">
+        <%= collection_select(:post, :need_id, Need.select("DISTINCT(city)"), :id, :city) %>
+        </div>
+        <div class ="category">
+        <%= collection_select(:post, :need_id, Need.select("DISTINCT(CATEGORY)"), :id, :category) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
