@@ -1,7 +1,6 @@
 class WorkdeskController < ApplicationController
 	before_filter :authenticate_user!
-	$balance_points
-
+	
 	def index
 		@count=1
 		@user=current_user.fname
