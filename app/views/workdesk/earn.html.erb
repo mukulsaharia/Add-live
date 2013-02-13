@@ -1,19 +1,21 @@
 <label class="heading_lable">Points Earn</label>
 
 <% @ref_points = 0 %>
-<% for i in @refer_list %>
-	<% if i.packagetype == "Silver" %>
-		<% @ref_points=@ref_points+100 %>
-	<% end %>
+<% if !@refer_list.blank? %>
+	<% for i in @refer_list %>
+		<% if i.packagetype == "Silver" %>
+			<% @ref_points=@ref_points+100 %>
+		<% end %>
 
-	<% if i.packagetype == "Gold" %>
-		<% @ref_points=@ref_points+200 %>
-	<% end %>
+		<% if i.packagetype == "Gold" %>
+			<% @ref_points=@ref_points+200 %>
+		<% end %>
 
-	<% if i.packagetype == "Platinum" %>
-		<% @ref_points=@ref_points+300 %>
+		<% if i.packagetype == "Platinum" %>
+			<% @ref_points=@ref_points+300 %>
+		<% end %>
 	<% end %>
-<% end %>
+<% end %>	
 <table class="table">
 	<tr>
 	<td>
