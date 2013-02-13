@@ -15,7 +15,7 @@ def statistics
 @clicks=Clicks.all
 end
 
-def mukul
+def searchyourneed
 end
 	
 def career

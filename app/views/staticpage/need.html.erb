@@ -9,12 +9,16 @@
         <%=yield(:title) %>
       </div>
       <div class="workdesk_parts">
-        <div class ="city">
-        <%= collection_select(:post, :need_id, Need.select("DISTINCT(city)"), :id, :city) %>
-        </div>
-        <div class ="category">
-        <%= collection_select(:post, :need_id, Need.select("DISTINCT(CATEGORY)"), :id, :category) %>
-        </div>
+        <%= form_tag("/searchyourneed", method: "get") do %>
+          <div class ="city">
+            <%= collection_select(:post, :need_id, Need.select("DISTINCT(city)"), :id, :city) %>
+          </div>
+          <div class ="category">
+            <%= collection_select(:post, :need_id, Need.select("DISTINCT(CATEGORY)"), :id, :category) %>
+          </div>
+            <%= submit_tag "Search",:disable_with => "Please wait..." %>
+        <% end %>
+        
       </div>
     </div>
   </div>

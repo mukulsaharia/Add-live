@@ -9,6 +9,12 @@
 			.title_line
 				Our Plan
 			.page_data
-				=link_to "Download", '/public/download/abc.pdf'
+				Download Add-Live Presentations:
+				.presentation				
+					%br
+					=link_to "For Clients", ppt_path('ADD-LIVE FOR CLIENTS.ppsx')
+					%br
+					%br
+					=link_to "For Members", ppt_path('ADD-LIVE FOR MEMBERS.ppsx')
 		.span4
 			= render :template => "staticpage/side_bar"
