@@ -1,7 +1,7 @@
 class StaticpageController < ApplicationController
 
 def index
-	@ads1=Ads.all(:order => "random()", :limit =>5)
+	@ads1=Ads.all(:order => "random()", :limit =>1)
 	
 	@roles=Ads.all
 end
