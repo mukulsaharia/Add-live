@@ -5,8 +5,8 @@ class WorkdeskController < ApplicationController
 	def index
 		@count=1
 		@user=current_user.fname
-		@ads=Ads.find(:all, :order => "RANDOM()", :limit => 1)
-		@refer_list=User.where("sponserID=?",current_user.username)
+		$ads=Ads.find(:all, :order => "RANDOM()", :limit => 1)
+		$refer_list=User.where("sponserID=?",current_user.username)
 		@pins= Pin.where("frenchisename=?",current_user.username)
 		@total_ads_points=Points.where( :user_id => current_user.id, :Referal => false).sum :points
 		
