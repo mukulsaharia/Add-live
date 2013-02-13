@@ -2,8 +2,7 @@ class StaticpageController < ApplicationController
 
 def index
 	@ads1=Ads.all(:order => "random()", :limit =>5)
-	@ads2=Ads.find(2)
-	@ads3=Ads.find(3)
+	
 	@roles=Ads.all
 end
 
