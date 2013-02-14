@@ -12,7 +12,7 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource
     @pins=Pin.all
-    @flag_pin=1
+    @flag_pin=0
     @pins.each do |pin|
       if resource.jpin == pin.jpin and pin.used == false and resource.packagetype ==pin.packagetype and resource.registration_type == pin.registration_type
         @flag_pin=1
@@ -22,28 +22,28 @@ class Devise::RegistrationsController < DeviseController
     end
 
     if @flag_pin == 1
-    if resource.save
-      
-      if resource.active_for_authentication?
-        set_flash_message :notice, :signed_up if is_navigational_format?
-        sign_in(resource_name, resource)
-        respond_with resource, :location => after_sign_up_path_for(resource)
-        if user_signed_in?
-          @pin.update_attributes(:user_id=> current_user.id, :used=> true ) 
+      if resource.save
+        
+        if resource.active_for_authentication?
+          set_flash_message :notice, :signed_up if is_navigational_format?
+          sign_in(resource_name, resource)
+          respond_with resource, :location => after_sign_up_path_for(resource)
+          if user_signed_in?
+            @pin.update_attributes(:user_id=> current_user.id, :used=> true ) 
+          end
+        else
+          set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
+          expire_session_data_after_sign_in!
+          respond_with resource, :location => after_inactive_sign_up_path_for(resource)
         end
       else
-        set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
-        expire_session_data_after_sign_in!
-        respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+        clean_up_passwords resource
+        respond_with resource
       end
     else
-      clean_up_passwords resource
-      respond_with resource
-    end
-    else
-    #redirect_to new_user_registration_path
-    set_flash_message :notice, :invalid_pin
-    redirect_to new_user_registration_path
+      #redirect_to new_user_registration_path
+      set_flash_message :notice, :invalid_pin
+      redirect_to new_user_registration_path
     end
   end
 
