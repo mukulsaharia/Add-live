@@ -3,7 +3,7 @@ AddLive::Application.configure do
 
   # Code is not reloaded between requests
   #config.cache_classes = true
-config.action_mailer.default_url_options = { :host => 'http://blooming-mesa-2619.herokuapp.com/' }
+config.action_mailer.default_url_options = { :host => 'http://infinite-harbor-6913.herokuapp.com/' }
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -44,7 +44,7 @@ config.action_mailer.default_url_options = { :host => 'http://blooming-mesa-2619
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "http://blooming-mesa-2619.herokuapp.com/"
+  config.action_controller.asset_host = "http://infinite-harbor-6913.herokuapp.com/"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
