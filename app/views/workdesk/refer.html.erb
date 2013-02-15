@@ -3,7 +3,7 @@
 <table class="table table-hover" >
 	<tr><td><b>Serial no</b></td><td><b>Name</b></td><td><b>User name</b></td><td><b>Joining Date</b></td><td><b>Package type</b></td></tr>
 	<% for i in $refers %>
-	<tr><td><b><%= @count %></b></td><td><%= i.fname %> <%= i.lname %></td>
+		<tr><td><b><%= @count %></b></td><td><%= i.fname %> <%= i.lname %></td>
 		<td><%= i.username %></td> 
 		<td><%= i.created_at.strftime("%d %b. %Y") %></td><td><%= i.packagetype %></td></tr>
 		<% @count=@count+1 %>
