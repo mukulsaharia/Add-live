@@ -1,8 +1,9 @@
 class StaticpageController < ApplicationController
 
+	
 def index
 	@ads1=Ads.all(:order => "random()", :limit =>5)
-	
+	@search_need = Need.all
 	@roles=Ads.all
 end
 
@@ -14,8 +15,12 @@ def statistics
 @clicks=Clicks.all
 end
 
-def searchyourneed
+def need
+	@needs= Need.where(:city => params[:search])	
+	
 end
+
+
 	
 def career
 	@career = Career.all(:order => '(created_at) DESC')
