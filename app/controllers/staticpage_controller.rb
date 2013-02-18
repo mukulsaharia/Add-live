@@ -16,7 +16,10 @@ def statistics
 end
 
 def need
-	@needs= Need.where(:city => params[:search])	
+	@selected_city = params[:city_search]
+	@selected_category = params[:category_search]	
+
+	@needs= Need.where(:city => @selected_city, :category => @selected_category)
 	
 end
 
