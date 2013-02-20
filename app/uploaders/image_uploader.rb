@@ -12,7 +12,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
-  
+
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -22,7 +22,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   
   def store_dir
-    "#{Rails.root}/assets/uploads"
+    'public/my/upload/'
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
