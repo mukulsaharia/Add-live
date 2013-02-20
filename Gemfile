@@ -13,7 +13,7 @@ gem 'activeadmin'
 gem 'populator'
 gem 'faker'
 gem 'paperclip'
-gem 'rail_stat_generator'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
