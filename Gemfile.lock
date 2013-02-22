@@ -119,7 +119,6 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    rail_stat_generator (2.0.0)
     rails (3.2.8)
       actionmailer (= 3.2.8)
       actionpack (= 3.2.8)
@@ -181,7 +180,6 @@ DEPENDENCIES
   paperclip
   pg
   populator
-  rail_stat_generator
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   sqlite3

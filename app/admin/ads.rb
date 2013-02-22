@@ -10,6 +10,9 @@ ActiveAdmin.register Ads do
       f.input :orgname
       f.input :category
       f.input :photo, :as => :file
+      f.input :city
+      f.input :Active
+      f.input :Imageslide
     end
     f.buttons
   end
