@@ -22,7 +22,7 @@ end
   match '/vision', to: 'staticpage#vision'
   match '/about', to: 'staticpage#about'
   match '/career', to: 'staticpage#career'
-  match '/faq', to: 'staticpage#faq'
+  match '/rewards', to: 'staticpage#faq'
   match '/plan', to: 'staticpage#plan'
   match '/support', to: 'staticpage#support'
   match '/whyaddlive', to: 'staticpage#whyaddlive'
