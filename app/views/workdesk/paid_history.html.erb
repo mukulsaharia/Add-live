@@ -23,7 +23,7 @@
 							<tr>
 								<td><b><%= @count %></b>
 								</td><td><%= i.points %></td>
-								<td><%= i.PaidDate %></td> 
+								<td><%= i.PaidDate.strftime("%d %b. %Y") %></td> 
 								
 								<% @count=@count+1 %>
 							</tr>

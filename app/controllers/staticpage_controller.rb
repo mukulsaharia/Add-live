@@ -5,14 +5,15 @@ def index
 	@ads1=Ads.where(:Imageslide => true).all(:order => "random()")
 	@search_need = Need.all
 	@roles=Ads.all
+	@users = User.all	
+	@clients= Client.all
+	@ads= Ads.all
+	@careers= Career.all
+	@clicks=Clicks.all
 end
 
 def statistics
-@users = User.all	
-@clients= Client.all
-@ads= Ads.all
-@careers= Career.all
-@clicks=Clicks.all
+	
 end
 
 def need

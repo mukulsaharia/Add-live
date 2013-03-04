@@ -41,6 +41,8 @@ end
   match '/full_ads/:id', to: 'client#full_ads'
   match '/workdesk/create_request', to: 'workdesk#create_request'
   match 'workdesk/paid_history', to: 'workdesk#paid_history'
+  match '/users', to: 'users#edit'
+  match '/update', to: 'users#update'
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -13,7 +13,7 @@ gem 'activeadmin'
 gem 'populator'
 gem 'faker'
 gem 'paperclip'
-
+gem 'nexmo'
 
 # Gems used only for assets and not required
 # in production environments by default.
