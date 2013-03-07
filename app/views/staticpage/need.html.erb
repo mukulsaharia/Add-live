@@ -13,17 +13,21 @@
         <%= render :partial =>'staticpage/searchneed' %>
           <div class="span7 offset2">
             <% if @needs.blank? %>
+              <div class="format_search_data2">
                 No records Found.....
+              </div>  
             <% else %>
               <% for need in @needs %>
               <table class="search_need_data">
                 <tr>
-                  <td><ul><li><b><font color="orange"><%= need.orgname %></font></b>
+                  <td><ul>
+                    <li><div class="format_search_data"><b><font color="White"><%= need.orgname %></font></b></div> <div class="format_search_data1  ">
                     <table>
+
                   <tr><td><%= "Contact no" %></td><td>:  </td><td><%= need.contactno %></td></tr>
                   <tr><td><%= "Address" %></td><td>:  </td><td><%= need.address %></td></tr>
                   <tr><td><%= "category" %></td><td>:  </td><td><%= need.category %></td></tr>
-                  <tr><td><%= "city" %></td><td>:  </td><td><%= need.city %></td></tr></table></li></ul></td>
+                  <tr><td><%= "city" %></td><td>:  </td><td><%= need.city %></td></tr></table></li></ul></td></div>
                 </tr>
                 <hr>
               </table>

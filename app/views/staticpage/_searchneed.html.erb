@@ -1,12 +1,12 @@
 <%= form_tag '/searchyourneed', :method => 'get' do %>
           <p>
           	
-          	<select name="city_search", id="need_search">
+            <select name="city_search", id="need_search">
           		<option> -select a city- </option>
           		<% Need.select("DISTINCT(city)").each do |p| %>
           		<option> <%= p.city %></option>
           		<% end %>
-         	</select>
+         	  </select>
 
          	<select name="category_search", id="need_search" >
          		<option> -select a category- </option>
