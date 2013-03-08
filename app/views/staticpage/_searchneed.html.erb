@@ -1,21 +1,24 @@
-<%= form_tag '/searchyourneed', :method => 'get' do %>
-          <p>
-          	
-            <select name="city_search", id="need_search">
-          		<option> -select a city- </option>
-          		<% Need.select("DISTINCT(city)").each do |p| %>
-          		<option> <%= p.city %></option>
-          		<% end %>
-         	  </select>
+<div class ="search_need_listbox">
+  <%= form_tag '/searchyourneed', :method => 'get' do %>
+            <p>
+            	
+              <select name="city_search", id="need_search">
+            		<option> -select a city- </option>
+            		<% Need.select("DISTINCT(city)").each do |p| %>
+            		<option> <%= p.city %></option>
+            		<% end %>
+           	  </select>
 
-         	<select name="category_search", id="need_search" >
-         		<option> -select a category- </option>
-          		<% Need.select("DISTINCT(category)").each do |p| %>
-          		<option> <%= p.category %></option>
-          		<% end %>
-         	</select>
+           	<select name="category_search", id="need_search" >
+           		<option> -select a category- </option>
+            		<% Need.select("DISTINCT(category)").each do |p| %>
+            		<option> <%= p.category %></option>
+            		<% end %>
+           	</select>
 
-            <%= submit_tag "Search", :name => nil, :class => "btn btn-primary search-btn" %>
-          </p>
-          <hr>
-        <% end %>  
+              <%= submit_tag "Search", :name => nil, :class => "btn btn-primary search-btn" %>
+            </p>
+          
+   <% end %>  
+</div>
+  <hr>
