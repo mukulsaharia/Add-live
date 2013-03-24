@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  scope :frenchise, where(:frenchise =>true)
   has_one :pin
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

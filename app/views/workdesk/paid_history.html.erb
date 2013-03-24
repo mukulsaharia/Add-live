@@ -8,30 +8,34 @@
 			<div class="title_line">
 				<%=yield(:title) %>
 			</div>
-			<div class="span6 offset2">
+			<div class="span8 offset2">
 			<div class="workdesk_parts">
 				<label class="heading_lable">Paid History</label>
 
 					<table class="table " >
 						<tr>
 							<td><b>Serial no</b></td>
-							<td><b>Points</b></td>
+							<td><b>Paid Points</b></td>
+							<td><b>TDS</b></td>
+							<td><b>Admin Charge</b></td>
+							<td><b>Total Amount</b></td>
 							<td><b>Paid Date</b></td>
 						</tr>
 						<% @count=1 %>
 						<% for i in @paid_history %>
 							<tr>
-								<td><b><%= @count %></b>
-								</td><td><%= i.points %></td>
+								<td><b><%= @count %></b></td>
+								<td><%= i.points %></td>
+								<td><%= i.tds %></td>
+								<td><%= i.admincharge %></td>
+								<td><%= i.points+i.tds+i.admincharge %></td>
 								<td><%= i.PaidDate.strftime("%d %b. %Y") %></td> 
 								
 								<% @count=@count+1 %>
 							</tr>
 						<% end %>
 
-							<tr><td></td><td></td>
-								<td>
-								</td></tr>
+							
 					</table>
 
 			</div>

@@ -2,7 +2,7 @@ class StaticpageController < ApplicationController
 
 	
 def index
-	@ads1=Ads.where(:Imageslide => true).all(:order => "random()")
+	@ads1=Ads.where(:Imageslide => true).all(:order => "rand()")
 	@search_need = Need.all
 	@roles=Ads.all
 	@users = User.all	

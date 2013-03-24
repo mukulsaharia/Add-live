@@ -5,19 +5,28 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  
+ 
+ <%= favicon_link_tag 'fevicon1.jpg' %>
 </head>
 
 <body>
 	
 	    <div class="container">
-
+	    	
 	       	<div class="logoc">
 	       		<div class="span3">
 		      		<%= link_to image_tag("add1.png"), root_path, id: "logo" %>
 		    	</div>
+		    	<div class="home_image span2">
+		    		<%= image_tag("home_image1.png") %>
+		    		<%= image_tag("home_image2.png") %>
+		    		<%= image_tag("home_image3.png") %>
+		    		<%= image_tag("home_image4.png") %>
+		    		<%= image_tag("home_image5.png") %>
+		    		<%= image_tag("home_image6.png") %>
+		    	</div>
 
-			    	<div class="span2 offset7">
+		    	   	<div class="span2 offset3">
 
 					  <% if user_signed_in? %>
 						<b>
@@ -39,8 +48,10 @@
 					    <% end %> <p>
 					  <% end %>
 						<%= Time.now.strftime("%d-%m-%Y") %>
+						
 					</div>
-	    	 </div>	
+	    	 </div>
+
 		    </div>
 		    
 		<div class="container">
@@ -72,7 +83,8 @@
 	      		<li> <%= link_to "Reward", '/rewards', id: "nv_hover" %> </li>
 	      		<li class="divider-vertical"></li>
 	      		<li> <%= link_to "Search your need ", '/searchyourneed', id: "nv_hover" %> <div class="new"><%= image_tag "New-08-june.gif" %></div></li>
-	      		
+	      		<li class="divider-vertical"></li>
+	      		<li> <%= link_to "Legal", '/legal', id: "nv_hover" %> </li>
 	      	</ul>
 		    
 	    </div>
@@ -96,5 +108,11 @@
     	</footer>
     </div>
 </body>
+<script>
 
+$(function() {
+    $('.home_image').cycle();
+});
+
+</script>
 </html>

@@ -1,7 +1,7 @@
 class Devise::RegistrationsController < DeviseController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
-
+  require 'nexmo'
   # GET /resource/sign_up
   def new
     resource = build_resource({})
@@ -30,6 +30,7 @@ class Devise::RegistrationsController < DeviseController
           respond_with resource, :location => after_sign_up_path_for(resource)
           if user_signed_in?
             @pin.update_attributes(:user_id=> current_user.id, :used=> true ) 
+            
           end
         else
           set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?

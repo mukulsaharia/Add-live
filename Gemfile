@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', :group => [:development, :test]
+gem 'mysql2', :group => [:development, :test]
 #gem 'thin'
 gem 'devise'
 gem 'carrierwave'
@@ -31,7 +31,7 @@ gem 'jquery-rails'
 gem 'haml'
 
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 	gem 'thin'
 end
 

@@ -43,6 +43,7 @@ end
   match 'workdesk/paid_history', to: 'workdesk#paid_history'
   match '/users', to: 'users#edit'
   match '/update', to: 'users#update'
+  match '/legal', to: 'staticpage#legal'
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

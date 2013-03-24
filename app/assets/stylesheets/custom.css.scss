@@ -25,9 +25,10 @@ body{
 .title_line{
 	margin-top: -35px;
 	margin-left:25px;
-	font-family:stencil;
+	font-family:arial;
 	font-size:140%;
 	color:white;
+	text-shadow: 1px 1px 2px black;
 }
 .page_data{
 	margin-top:25px;
@@ -48,6 +49,7 @@ body{
 	margin-left: 0;
     padding-left: 10px;
     border-left: 1px solid #363451;
+
 }
 .form-inline{
 	margin-top:0px;
@@ -57,9 +59,9 @@ body{
 	margin-bottom:20px;
 	font-size:110%;
 	color: #03417C;
-	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
-	font-face: Arial Rounded MT Bold;
 	
+	font-face: Arial Rounded MT Bold;
+	text-shadow: 10px 10px 20px black;
 }
 .login_button{
 	margin-left:130px;
@@ -151,6 +153,8 @@ textarea {
 	margin-bottom:20px;
 	font-weight:bold;
 	color:blue;
+	
+
 }
 
 #error_explanation
@@ -207,9 +211,10 @@ H2 {font-size: 15px;}
 .ads_line{
 	margin-top: -35px;
 	margin-left:10px;
-	font-family:stencil;
+	font-family:arial;
 	font-size:135%;
 	color:white;
+	text-shadow: 1px 1px 2px black;
 }
 .main_footer{
 	color: orange;

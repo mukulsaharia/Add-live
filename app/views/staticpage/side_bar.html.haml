@@ -1,4 +1,17 @@
 .spa3
+	.latest_news
+		.latest_heading
+			Latest News and Events
+		.latest_data
+			%marquee{:direction => "up", :scrollamount => 3}
+				Welcome,
+				%br
+					Add-Live.com,
+				%br
+					A Place where ads-add happiness. 
+				%br	 
+					For any enquiry contact to support@add-live.com
+
 	-if user_signed_in?
 		.members_area
 			%strong Welcome,
@@ -41,8 +54,7 @@
 	.members_area
 		%strong Catch Add-Live on Facebook
 	= render :template => "staticpage/social"
-
-
+	
 
 
 

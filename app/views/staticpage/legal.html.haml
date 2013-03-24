@@ -1,0 +1,17 @@
+=provide(:title, 'Legal')
+%title
+	= yield(:title)
+.index_page
+	.container
+		.span8
+			.title_tag
+				=image_tag("title241x40.png")
+			.title_line
+				Legal
+			.page_data
+				.heading_lable
+					=image_tag("add-live.jpg")
+				.coming
+					Coming Soon ......
+		.span4
+			= render :template => "staticpage/side_bar"
